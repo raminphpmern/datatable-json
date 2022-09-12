@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <meta content="initial-scale=1, maximum-scale=1, 
+                user-scalable=0" name="viewport" />
+    <meta name="viewport" content="width=device-width" />
+    <!--Datatables server side process -->
+    <!--Datatable plugin CSS file -->
+    <link rel="stylesheet" href=
+"https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+  
+    <!--jQuery library file -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  
+    <!--Datatable plugin JS library file -->
+    <script type="text/javascript" src=
+"https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
+    </script>
+</head>
+  
+<body>
+    <center><h2>Tech Links Manager</h2></center>
+
+<p>Here you can find some usefull website links to prepare for an interview. These basic and advanced stuffs are necessary when you're gonna take up an interview.
+Search through the text box to check more links.</p>
+  
+    <!--HTML table with student data-->
+    <table id="tableID" class="display" 
+        style="width: 100%;">
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Link</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Technology</th>
+                <th>Link</th>
+                <th>Tags</th>
+            </tr>
+        </tfoot>
+    </table>
+  
+    <script>
+      
+        /* Initialization of datatable */
+        $(document).ready(function () {
+  
+            /* Student's data loaded from 
+            text file */
+            $('#tableID').DataTable({
+                "ajax": 'ajaxData.json'
+            });
+        });
+    </script>
+</body>
+  
+</html>
